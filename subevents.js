@@ -31,3 +31,25 @@ function indexCommand(main_event) {
 module.exports = {
     indexCommand: indexCommand
 }
+
+function compileCommand(side_event) {
+    var types = ['photo', 'image', 'text', 'message'];
+    var check_off = Commands[side_event] === undefined ? false : true
+    if (!check_off) {
+        return null;
+    }
+    var recreation = Commands.indexOf(side_event)
+    if (recreation !== 1) {
+        return null;
+    }
+    if (Commands.filter(item => item.includes(side_event)) {
+        /*
+        var db = {database}
+        var remove = {db check}
+        */
+        // Functions
+        // .
+        // .
+        // End 
+    }
+}
