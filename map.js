@@ -168,6 +168,24 @@ if (typeof MM === "object") {
     };
 
     MM.extend(MM.StamenTileLayer, MM.Layer);
+    var BACK = async function (MM.template()) {
+        async function deprecate2(base, flavors) {
+            var provider = getProvider(base);
+            for (var i = 0; i < flavors.length; i++) {
+                var flavor = [base, flavors[i]].join("-");
+                PROVIDERS[flavor] = MAKE_PROVIDER(flavor, provider.type, provider.minZoom, provider.maxZoom);
+                PROVIDERS[flavor].deprecated = true;
+            }
+        };
+        await deprecate2(MM.Layer, BACK(MM.template)).then(async (res) => {
+            if (res.PROVIDERS[flavor].deprecated == false ||
+                res.PROVIDERS[flavor].length == 0 || 
+                res.PROVIDERS[flavor].length == 5
+            ) {
+                throw new Error ('Schema Infrastructure Cannot Obtained')
+            }
+        })     
+    }
 }
 
 /*
