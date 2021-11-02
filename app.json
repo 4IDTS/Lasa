@@ -26,6 +26,11 @@
             "required": false,
             "value": "false"
         },
+        "BUTTON_MODE": {
+            "description": "Mesaj yerie buton kullanın! Use buttons on WhatApp!",
+            "required": true,
+            "value": "false"
+        },
         "ANTI_LINK": {
             "description": "Link Engelleme Sistemi. Link Blocking System.",
             "required": true,
