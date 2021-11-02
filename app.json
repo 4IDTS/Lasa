@@ -165,10 +165,16 @@
             "value": "true"
         }
     },
+    "formation": {
+        "web": {
+            "quantity": 1,
+            "size": "free"
+        }
+    },
     "addons": [{
-      "plan": "heroku-postgresql"
+        "plan": "heroku-postgresql"
     }],
     "buildpacks": [{
-      "url": "heroku-community/apt"
-      }]
-  }
+        "url": "heroku-community/apt"
+    }]
+}
